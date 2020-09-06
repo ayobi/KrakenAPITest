@@ -1,0 +1,24 @@
+[nodemon] restarting due to changes...
+[nodemon] starting `node app.js`
+My Kraken API
+{
+  error: [],
+  result: { unixtime: 1599362306, rfc1123: 'Sun,  6 Sep 20 03:18:26 +0000' }
+}
+{
+  error: [],
+  result: {
+    XXBTZUSD: {
+      a: [Array],
+      b: [Array],
+      c: [Array],
+      v: [Array],
+      p: [Array],
+      t: [Array],
+      l: [Array],
+      h: [Array],
+      o: '10162.20000'
+    }
+  }
+}
+{ error: [], result: { open: {} } }
