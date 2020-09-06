@@ -15,7 +15,7 @@ const kraken       = new KrakenClient(key, secret, otp);
 	//Get server time
 	console.log(await kraken.api('Time'));
 
-	// Get Ticker Info
+	// Get ticker info
 	console.log(await kraken.api('Ticker', { pair : 'XXBTZUSD' }));
 	
 	// Display user's open orders
