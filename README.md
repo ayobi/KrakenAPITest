@@ -72,7 +72,7 @@ Testing Kraken's API using Docker, NPM, NodeJS, and ExpressJS.
 	})(); 
     ```
 
-16. Run `docker run -it -p 9000:3001 -v $(pwd):/app MyKrakenAPI` to kick start the container
+16. Run `docker run -it -p 9000:3001 -v $(pwd):/app MyKrakenAPI` to kickstart the container, and you should see your desired results in the console. :+1:
 
 
 # Credit
