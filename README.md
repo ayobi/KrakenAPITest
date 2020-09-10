@@ -39,18 +39,40 @@ Testing Kraken's API using Docker, NPM, NodeJS, and ExpressJS.
 9. Run `docker build -t MyKrakenAPI .` to build the Docker image
 10. Run `docker run -it -p 9000:3001 MyKrakenAPI` to create the container 
 11. Run `docker run -d -p 9000:3001 MyKrakenAPI` to run the container in the background
-12. To avoid rebuilding our image everytime a change in the code has been made, we can use nodeman which automatically does the rebuilding seen below
+12. To avoid rebuilding our image everytime a change in the code has been made, we can use `nodeman` which automatically does the rebuilding, Run `npm install --save nodemon` and change the `start` command seen  in the code below
 
     ```json
     "scripts": {
-        "start": "node app.js",
+        "start": "nodemon app.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     ```
 
-13. 
+13. Run `docker build -t MyKrakenAPI .` so that we can have `nodemon` in our image for further usage
+14. Run `npm install kraken-api` to install out Kraken API
+15. Add to the `app.js` file your Kraken info and your desired API call
 
+    ```javascript
+    const key          = 'Your API Key Here'; // API Key
+    const secret       = 'Your API Private Key Here'; // API Private Key
+    const otp          = 'Your 2FA Password Here'; //2FA Password If Needed
+    const KrakenClient = require('kraken-api');
+    const kraken       = new KrakenClient(key, secret, otp);
 
+    (async () => {
+        //Get server time
+        console.log(await kraken.api('Time'));
+
+        // Get Ticker Info
+        console.log(await kraken.api('Ticker', { pair : 'XXBTZUSD' }));
+
+        // Display user's open orders
+        console.log(await kraken.api('OpenOrders'));
+   
+	})(); 
+    ```
+
+16. Run `docker run -it -p 9000:3001 -v $(pwd):/app MyKrakenAPI` to kick start the container
 
 
 # Credit
