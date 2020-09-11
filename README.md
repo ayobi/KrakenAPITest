@@ -18,7 +18,7 @@ Testing Kraken's API using Docker, NPM, NodeJS, and ExpressJS.
     
 5. Run `npm init` in the terminal, this will create your package.json
 6. Run `npm install --save express` to install ExpressJS
-7. Add a start command to your package.json and then run `npm run start` to see that it works
+7. Add a start command to your package.json `"start": "node app.js",` as seen in the code below and then run `npm run start` to see that it works
 
     ```json
     "scripts": {
@@ -37,7 +37,7 @@ Testing Kraken's API using Docker, NPM, NodeJS, and ExpressJS.
     CMD ["npm", "start"]
     ```
 9. Run `docker build -t mykrakenapi .` to build the Docker image
-10. Run `docker run -it -p 9000:3001 mykrakenapi` to create the container 
+10. Run `docker run -it -p 9000:3001 mykrakenapi` to create the container, you can use any free port that you have, for me it was 9000
 11. Run `docker run -d -p 9000:3001 mykrakenapi` to run the container in the background
 12. To avoid rebuilding our image everytime a change in the code has been made, we can use `nodeman` which automatically does the rebuilding, Run `npm install --save nodemon` and change the `start` command seen  in the code below
 
@@ -48,8 +48,8 @@ Testing Kraken's API using Docker, NPM, NodeJS, and ExpressJS.
     },
     ```
 
-13. Run `docker build -t mykrakenapi .` so that we can have `nodemon` in our image for further usage
-14. Run `npm install kraken-api` to install out Kraken API
+13. Run `npm install kraken-api` to install out Kraken API
+14. Run `docker build -t mykrakenapi .` so that we can have `nodemon` and `kraken-api` in our image for further usage
 15. Add to the `app.js` file your Kraken info and your desired API call
 
     ```javascript
