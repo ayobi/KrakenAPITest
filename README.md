@@ -2,7 +2,7 @@
 Testing Kraken's API using Docker, NPM, NodeJS, and ExpressJS.
 
 ### Steps to Reproduce
-1. Download a code editor like VS Code https://code.visualstudio.com/
+1. Download a code editor like VS Code https://code.visualstudio.com/ and add the docker extension
 2. Install Docker https://www.docker.com/products/docker-desktop
 3. Install NodeJS https://nodejs.org/en/
 4. Create a folder for your project. Open folder in VS Code and create a javascript file with the code below, mine's called `app.js` as seen in the codebase
