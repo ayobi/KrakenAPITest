@@ -18,7 +18,7 @@ Testing Kraken's API using Docker, NPM, NodeJS, and ExpressJS.
     
 5. Run `npm init` in the console, this will create your package.json
 6. Run `npm install --save express` to install ExpressJS
-7. Add a start command to your package.json
+7. Add a start command to your package.json and then run `npm run start` to see that it works
 
     ```json
     "scripts": {
