@@ -27,7 +27,7 @@ Testing Kraken's API using Docker, NPM, NodeJS, and ExpressJS.
     },
     ```
     
-8. Add a another file called `Dockerfile` with the code below
+8. Add another file called `Dockerfile` with the code below
     ```Dockerfile
     FROM node:9-slim
     WORKDIR /app
