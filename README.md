@@ -72,7 +72,7 @@ Testing Kraken's API using Docker, NPM, NodeJS, and ExpressJS.
 	})(); 
     ```
 
-16. Run `npm run start` and you should see your desired results in the console. :+1:
+16. Run `npm run start` and you should see your desired results in the console :+1:
 
 
 # Credit
